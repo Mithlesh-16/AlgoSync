@@ -1,9 +1,8 @@
 import {io} from 'socket.io-client';
 
-const currentHost = window.location.hostname;
-const SERVER_URL = `http://${currentHost}:5000`;
+const SERVER_URL = `https://algosync-vqo5.onrender.com`;
 
 export const socket = io(SERVER_URL, {
-    // transports: ['websocket'],
+    transports: ['websocket'],
     reconnectionAttempts: 5,
 });

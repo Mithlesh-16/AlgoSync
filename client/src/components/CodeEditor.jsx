@@ -70,7 +70,7 @@ const CodeEditor = () => {
     
         try{
             const currentHost = window.location.hostname;
-            const response = await fetch(`http://${currentHost}:5000/api/compile`, {
+            const response = await fetch(`https://algosync-vqo5.onrender.com/api/compile`, {
                 method : 'POST', 
                 headers : {'Content-Type' : 'application/json'},
                 body : JSON.stringify({code: codes[language], language})
